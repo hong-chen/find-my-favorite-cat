@@ -1,7 +1,7 @@
-.gitignore
 *pyc
 /dist/
 /*.egg-info
 python
 !test*
+!*png
 
