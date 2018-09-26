@@ -59,7 +59,7 @@ class BOULDER_HUMANE_SOCIETY:
         for i, item in enumerate(catImageUrlItems):
             imageUrl   = item.find(src=True)['src']
             catImageUrls.append(imageUrl)
-            imageLocal = '{fdir}/cat_{index}_{name}.png'.format(fdir=self.downloadDirectory, index=str(i).zfill(2), name='-'.join(catNames[i].split()))
+            imageLocal = '{fdir}/cat_{index}_{name}.png'.format(fdir=self.downloadDirectory, index=catUrls[i].split('/')[-1], name='-'.join(catNames[i].split()))
             catImageLocals.append(imageLocal)
             urlretrieve(imageUrl, imageLocal)
 
