@@ -87,3 +87,5 @@ class BOULDER_HUMANE_SOCIETY:
 if __name__ == '__main__':
 
     cat_web = BOULDER_HUMANE_SOCIETY()
+    for key in cat_web.cats.keys():
+        print(cat_web.cats[key]['name'], cat_web.cats[key]['status'])
