@@ -9,7 +9,7 @@ with open(os.path.join(current_dir, 'README.rst'), encoding='utf-8') as f:
 setup(
      name = 'find_my_favorite_cat',
      version = '0.1',
-     description = 'Find cat information that matches the input from user.'
+     description = 'Find cat information that matches the input from user.',
      long_description = long_description,
      long_description_content_type = 'text/x-rst',
      classifiers = [
@@ -24,9 +24,8 @@ setup(
      author_email = 'me@hongchen.cz, yixingshao@foxmail.com',
      license = 'MIT',
      packages = ['find_my_favorite_cat'],
-     # install_requires = ['nose', 'numpy', 'scipy', 'h5py', 'netcdf4', 'python-hdf4'],
+     install_requires = ['beautifulsoup4'],
      python_requires = '~=3.6',
-     # scripts = ['bin/lss'],
      include_package_data = True,
      zip_safe = False
      )
