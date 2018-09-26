@@ -12,8 +12,6 @@ class BOULDER_HUMANE_SOCIETY:
         self.downloadDirectory = 'data/BHS_{date}'.format(date=datetime.datetime.today().strftime('%Y%m%d'))
         if not os.path.exists(self.downloadDirectory):
             os.system('mkdir -p {directory}'.format(directory=self.downloadDirectory))
-        else:
-            os.system('rm -rf {directory}/*'.format(directory=self.downloadDirectory))
 
         website = 'https://www.boulderhumane.org'
         websiteCat = website + '/animals/adoption/cats'
@@ -67,6 +65,7 @@ class BOULDER_HUMANE_SOCIETY:
 
         catAll = {}
         for i, catName in enumerate(catNames):
+
             cat0 = {}
             cat0['name']        = catName
             cat0['sex']         = catGenders[i]
@@ -79,35 +78,12 @@ class BOULDER_HUMANE_SOCIETY:
 
             catAll['cat_{index}'.format(index=str(i).zfill(2))] = cat0
 
-        for key in catAll.keys():
-            print(key, catAll[key])
         self.cats = catAll
-
-
-    def CREATE_DOWNLOAD_LIST(self, keyWord='https://g.petango.com'):
-        downloadList = {}
-        i = 1
-        for item in self.bs.findAll(src=True):
-            catDict = {}
-            if keyWord in item['src']:
-                catDict['image_url'] = item['src']
-                downloadList['cat_{index}'.format(index=str(i).zfill(4))] = catDict
-                i += 1
-        return downloadList
-
-
-
-
-
-def getAbsoluteURL(baseUrl, source):
-
-    pass
-
 
 
 
 
 
 if __name__ == '__main__':
-    website = 'https://www.boulderhumane.org/animals/adoption/cats'
-    cat_web1 = BOULDER_HUMANE_SOCIETY()
+
+    cat_web = BOULDER_HUMANE_SOCIETY()
