@@ -20,6 +20,8 @@ patch_request_class(app)
 
 app.config["SECRET_KEY"]= "hehehehahahahahh"
 
+
+
 @app.route("/", methods=["GET", "POST"])
 def index():
 
@@ -39,6 +41,10 @@ def index():
         session["file_urls"] = file_urls
         return "Uploading..."
     return render_template("index.html")
+
+
+
+
 
 @app.route("/results")
 def results():
