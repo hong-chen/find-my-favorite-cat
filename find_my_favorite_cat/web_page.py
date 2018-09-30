@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # dropzone for images
 dropzone = Dropzone(app)
-app.config["DROPZONE_UPLOAD_MULTIPLE"]     = False
+app.config["DROPZONE_UPLOAD_MULTIPLE"]     = True
 app.config["DROPZONE_ALLOWED_FILE_CUSTOM"] = True
 app.config["DROPZONE_ALLOWED_FILE_TYPE"]   = "image/*"
 app.config["DROPZONE_REDIRECT_VIEW"]       = "results"
