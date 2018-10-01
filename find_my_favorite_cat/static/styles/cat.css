@@ -1,0 +1,15 @@
+@font-face {
+    src: url(fonts/CatsAlphabet.ttf);
+    font-family: catfont;
+}
+
+p.cat {
+    line-height: 100px;
+    width: 100px;
+    font-family: catfont;
+    font-size: 12em;
+    text-align: center;
+    line-height: 0;
+    height: 10;
+}
+

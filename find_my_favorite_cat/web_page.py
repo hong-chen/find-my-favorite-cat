@@ -14,7 +14,7 @@ app.config["DROPZONE_MAX_FILES"]           = 1
 app.config["DROPZONE_MAX_FILE_SIZE"]       = 25
 app.config["DROPZONE_REDIRECT_VIEW"]       = "results"
 app.config["DROPZONE_ENABLE_CSRF"]         = True
-app.config["DROPZONE_DEFAULT_MESSAGE"]     = "<h3><span style=\"color:#adb4ba\">Please drop a image of your favorite cat here:</span></h3>"
+app.config["DROPZONE_DEFAULT_MESSAGE"]     = "<br><br><h2><span style=\"color:#adb4ba\">Please drop an image of your favorite cat here:</span></h2><br><br><h3><span style=\"color:#adb4ba\">drag or click to upload</span></h3>"
 app.config["DROP_ZONE_TIMEOUT"]            = 300000
 
 # upload

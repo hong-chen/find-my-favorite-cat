@@ -4,16 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Find My Favorite Cat</title>
+    <link href="{{ url_for('static', filename='styles/cat.css') }}" type="text/css" rel="stylesheet" />
     {{ dropzone.load_css() }}
-    {{ dropzone.style('border: 5px dashed #adb4ba; margin: 20%; min-height: 400px;') }}
+    {{ dropzone.style('border: 5px dashed #adb4ba; margin-top: 5px; margin-left:20%; margin-right: 20%; min-height: 400px;') }}
   </head>
+
   <body>
-    <h1>
-      <br>
-      <br>
-      <br>
-      <center>Hello Kitty~</center>
-    </h1>
+    <!--<p class="cat"><span style="font-size:88px">WELCOME</span></p>-->
+    <p style="text-align:center; font-family:catfont; font-size:88px; margin-top:100px; margin-bottom:0;">WELCOME</p>
+    <p style="text-align:center; font-size:28px">by Pippi & Raccoon</p>
     {{ dropzone.create(action_view='index') }}
     {{ dropzone.load_js() }}
     {{ dropzone.config() }}
